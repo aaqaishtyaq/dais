@@ -1,6 +1,8 @@
 #! /bin/bash
 
 NC="\033[0m" # No Color
+BOLD="\033[1m"
+UNDERLINE="\033[4m"
 RED="\033[31m"
 GREEN="\033[32m"
 YELLOW="\033[33m"
@@ -17,8 +19,8 @@ BRIGHT_CYAN="\033[96m"
 display() {
   local color=$1
   local text=$2
-  echo -e "${color}${text}${NC}"
-  echo -e "\n"
+  printf "${color}${text}${NC}"
+  printf "\n"
 }
 
 warning() {
